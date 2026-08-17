@@ -3,284 +3,699 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PM Cars | Quality Pre-Owned Cars</title>
+
+<title>PM Cars | Car Consultancy & Services</title>
 
 <style>
+
 * {
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  background: #080808;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
+html {
+  scroll-behavior: smooth;
 }
 
-.container {
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fa;
+  color: #172033;
+}
+
+.page {
+  width: 100%;
   max-width: 520px;
   margin: auto;
   min-height: 100vh;
-  background: linear-gradient(180deg, #090909, #151515);
+  background: #f5f7fa;
+  overflow: hidden;
 }
 
+/* ================= HEADER ================= */
+
 .header {
+  background: linear-gradient(135deg, #071a35, #0d2b52);
+  padding: 18px 15px 25px;
   text-align: center;
-  padding: 30px 20px 22px;
-  background: radial-gradient(circle at top, #33280e, #090909 60%);
-  border-bottom: 1px solid #4a3815;
+  border-bottom: 4px solid #d6a62e;
+}
+
+.logo-box {
+  display: inline-block;
+  background: white;
+  padding: 8px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  max-width: 95%;
 }
 
 .logo {
-  font-size: 46px;
-  font-weight: 900;
-  letter-spacing: -3px;
+  width: 100%;
+  max-width: 390px;
+  height: auto;
+  display: block;
+  border-radius: 10px;
 }
 
-.logo span {
-  color: #d8ad3d;
-}
-
-.tagline {
-  margin-top: 6px;
-  font-size: 13px;
+.brand-text {
+  margin-top: 14px;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
   letter-spacing: 2px;
 }
 
-.badge {
-  display: inline-block;
+/* TRUST */
+
+.trust {
   margin-top: 15px;
-  padding: 8px 14px;
-  border: 1px solid #806321;
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+
+.trust span {
+  color: #f3cf68;
+  border: 1px solid #d6a62e;
+  background: rgba(214,166,46,0.10);
+  padding: 8px 11px;
   border-radius: 30px;
-  color: #f3d477;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: bold;
 }
 
-.car {
-  margin: 20px 16px;
-  padding: 35px 15px;
-  text-align: center;
-  border-radius: 20px;
-  background: linear-gradient(135deg, #171717, #090909);
-  border: 1px solid #5a4619;
-  box-shadow: 0 15px 40px #000;
-}
-.company-logo {
-  width: 85%;
-  max-width: 330px;
-  height: auto;
-  display: block;
-  margin: auto;
-  border-radius: 12px;
+/* ================= SERVICES ================= */
+
+.services {
+  background: white;
+  padding: 30px 15px;
 }
 
-.car p {
-  color: #ccc;
+.section-title {
+  text-align: center;
   margin: 0;
+  font-size: 28px;
+  color: #071a35;
+  font-weight: 900;
 }
 
-.content {
-  padding: 10px 18px 30px;
+.section-title span {
+  color: #b58112;
 }
 
-.title {
+.section-subtitle {
   text-align: center;
-  font-size: 21px;
-  margin: 12px 0 20px;
+  color: #687386;
+  font-size: 13px;
+  margin: 8px 0 24px;
 }
 
-.gold {
-  color: #f3d477;
+/* SERVICE GRID */
+
+.service-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
 }
 
-.button {
+.service {
+  min-height: 155px;
+  padding: 17px 13px;
+  background: linear-gradient(145deg, #ffffff, #f3f6fa);
+  border: 1px solid #e1e6ee;
+  border-radius: 18px;
+  box-shadow: 0 7px 18px rgba(7,26,53,0.09);
+  position: relative;
+  overflow: hidden;
+}
+
+.service:nth-child(1) {
+  border-top: 4px solid #d6a62e;
+}
+
+.service:nth-child(2) {
+  border-top: 4px solid #2878bd;
+}
+
+.service:nth-child(3) {
+  border-top: 4px solid #b88616;
+}
+
+.service:nth-child(4) {
+  border-top: 4px solid #198b62;
+}
+
+.service:nth-child(5) {
+  border-top: 4px solid #7a55b8;
+}
+
+.service:nth-child(6) {
+  border-top: 4px solid #c36b24;
+}
+
+.service-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-size: 22px;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg,#071a35,#d6a62e);
+}
+
+.service:nth-child(2) .service-icon {
+  background: linear-gradient(135deg,#0b5ca8,#43a5ff);
+}
+
+.service:nth-child(3) .service-icon {
+  background: linear-gradient(135deg,#8e6411,#e5bd48);
+}
+
+.service:nth-child(4) .service-icon {
+  background: linear-gradient(135deg,#087447,#30c888);
+}
+
+.service:nth-child(5) .service-icon {
+  background: linear-gradient(135deg,#5b21b6,#a78bfa);
+}
+
+.service:nth-child(6) .service-icon {
+  background: linear-gradient(135deg,#a94f12,#ed984b);
+}
+
+.service h3 {
+  margin: 0;
+  color: #071a35;
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+.service p {
+  margin: 7px 0 0;
+  color: #687386;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+/* ================= CONTACT ================= */
+
+.contact {
+  padding: 30px 15px;
+  background: linear-gradient(180deg,#f5f7fa,#ffffff);
+}
+
+.contact-card {
+  background: linear-gradient(145deg,#071a35,#0d315c);
+  border-radius: 22px;
+  padding: 22px 15px;
+  box-shadow: 0 14px 30px rgba(7,26,53,0.20);
+}
+
+.contact-card .section-title {
+  color: white;
+}
+
+.contact-card .section-title span {
+  color: #f3cf68;
+}
+
+.contact-card .section-subtitle {
+  color: #d9e3ef;
+}
+
+/* CONTACT BUTTONS */
+
+.contact-buttons {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.contact-button {
   display: flex;
   align-items: center;
-  gap: 15px;
-  padding: 16px;
-  margin: 12px 0;
+  gap: 14px;
+  min-height: 72px;
+  padding: 12px 15px;
   border-radius: 16px;
   text-decoration: none;
   color: white;
-  background: linear-gradient(135deg, #1c1c1c, #101010);
-  border: 1px solid #403216;
+  font-weight: bold;
+  transition: transform 0.15s ease;
 }
 
-.icon {
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
+.contact-button:active {
+  transform: scale(0.98);
+}
+
+/* ICON */
+
+.contact-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 14px;
   display: grid;
   place-items: center;
-  background: #261d09;
-  color: #f3d477;
-  font-size: 21px;
+  font-size: 23px;
+  background: white;
 }
 
-.button strong {
+/* CALL */
+
+.call-button {
+  background: linear-gradient(135deg,#f3cf68,#c58f16);
+  color: #071a35;
+}
+
+.call-button .contact-icon {
+  color: #071a35;
+}
+
+/* WHATSAPP */
+
+.whatsapp-button {
+  background: linear-gradient(135deg,#15945d,#20bd78);
+}
+
+.whatsapp-button .contact-icon {
+  color: #15945d;
+}
+
+/* LOCATION */
+
+.location-button {
+  background: linear-gradient(135deg,#2878bd,#4aa5ee);
+}
+
+.location-button .contact-icon {
+  color: #2878bd;
+}
+
+.contact-button strong {
   display: block;
   font-size: 16px;
 }
 
-.button small {
+.contact-button small {
   display: block;
   margin-top: 4px;
-  color: #aaa;
+  font-size: 11px;
+  opacity: 0.9;
 }
 
-.call {
-  background: linear-gradient(135deg, #d8ad3d, #8e681d);
-  color: #080808;
-  border: none;
+/* ================= CONTACT INFO ================= */
+
+.contact-info {
+  margin-top: 16px;
+  padding: 18px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(7,26,53,0.08);
 }
 
-.call .icon {
-  background: #080808;
-}
-
-.call small {
-  color: #241c0b;
-}
-
-.info {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.box {
-  padding: 15px 10px;
+.contact-info-title {
   text-align: center;
-  border-radius: 14px;
-  background: #111;
-  border: 1px solid #332915;
+  color: #071a35;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 12px;
 }
 
-.box b {
+.phone-number {
   display: block;
-  color: #f3d477;
-  font-size: 12px;
-  margin-bottom: 6px;
+  text-align: center;
+  text-decoration: none;
+  color: #071a35;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 5px;
+  border-top: 1px solid #edf0f4;
 }
 
-.box span {
-  font-size: 12px;
-  color: #ccc;
+.phone-number:first-of-type {
+  border-top: none;
 }
+
+.phone-number:hover {
+  color: #b58112;
+}
+
+/* ================= FOOTER ================= */
 
 .footer {
   text-align: center;
-  padding: 24px;
-  border-top: 1px solid #292015;
-  color: #999;
-  font-size: 12px;
+  background: #071a35;
+  color: #bfcbd9;
+  padding: 25px 15px 30px;
+  font-size: 11px;
 }
 
-.footer b {
-  color: #f3d477;
+.footer strong {
+  color: #f3cf68;
+  font-size: 14px;
 }
+
+@media (max-width: 380px) {
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service {
+    min-height: 130px;
+  }
+
+  .logo {
+    max-width: 320px;
+  }
+
+  .trust span {
+    font-size: 10px;
+  }
+
+}
+
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="page">
+
+<!-- ================= HEADER ================= -->
 
 <header class="header">
 
-<div class="logo">
-<span>PM</span> CARS
-</div>
+  <div class="logo-box">
 
-<div class="tagline">
-QUALITY PRE-OWNED CARS
-</div>
+    <img
+      src="pm-cars-logo.png"
+      class="logo"
+      alt="PM Cars Logo"
+    >
 
-<div class="badge">
-TRUST • QUALITY • SATISFACTION
-</div>
+  </div>
+
+  <div class="brand-text">
+    CAR CONSULTANCY & SERVICES
+  </div>
+
+  <div class="trust">
+
+    <span>✓ TRUST</span>
+
+    <span>★ QUALITY</span>
+
+    <span>♥ SATISFACTION</span>
+
+  </div>
 
 </header>
 
-<div class="car">
 
-<img src="PM_Cars_Logo_White_Background.png " class="company-logo" alt="PM Cars">
+<!-- ================= SERVICES ================= -->
 
-<p>Second Hand Car Sales</p>
+<section class="services">
 
-</div>
+  <h2 class="section-title">
+    OUR <span>SERVICES</span>
+  </h2>
 
-<section class="content">
+  <p class="section-subtitle">
+    Professional care & vehicle solutions
+  </p>
 
-<div class="title">
-Welcome to <span class="gold">PM Cars</span>
-</div>
 
-<a class="button call" href="tel:+917868948330">
+  <div class="service-grid">
 
-<div class="icon">☎</div>
 
-<div>
-<strong>Call PM Cars</strong>
-<small>Speak directly with M. Santhosh</small>
-</div>
+    <!-- SERVICE 1 -->
 
-</a>
+    <div class="service">
 
-<a class="button"
-href="https://wa.me/917868948330?text=Hello%20PM%20Cars%2C%20I%27m%20interested%20in%20your%20second-hand%20cars."
-target="_blank">
+      <div class="service-icon">
+        🚗
+      </div>
 
-<div class="icon">💬</div>
+      <h3>
+        Pre-Owned Car Sales
+      </h3>
 
-<div>
-<strong>WhatsApp Us</strong>
-<small>Enquire about available cars</small>
-</div>
+      <p>
+        Quality second-hand cars for your next journey.
+      </p>
 
-</a>
+    </div>
 
-<a class="button"
-href="https://maps.app.goo.gl/b3NwNB9SVPCJLstV8"
-target="_blank">
 
-<div class="icon">📍</div>
+    <!-- SERVICE 2 -->
 
-<div>
-<strong>Open Location</strong>
-<small>Navigate to PM Cars</small>
-</div>
+    <div class="service">
 
-</a>
+      <div class="service-icon">
+        🤝
+      </div>
 
-<div class="info">
+      <h3>
+        Buy & Sell Assistance
+      </h3>
 
-<div class="box">
-<b>SECOND-HAND CARS</b>
-<span>Quality pre-owned vehicles</span>
-</div>
+      <p>
+        Guidance to buy or sell your vehicle with confidence.
+      </p>
 
-<div class="box">
-<b>OWNER</b>
-<span>M. Santhosh</span>
-</div>
+    </div>
 
-</div>
+
+    <!-- SERVICE 3 -->
+
+    <div class="service">
+
+      <div class="service-icon">
+        ✨
+      </div>
+
+      <h3>
+        Premium Steam Car Wash
+      </h3>
+
+      <p>
+        Interior & exterior deep cleaning.
+      </p>
+
+    </div>
+
+
+    <!-- SERVICE 4 -->
+
+    <div class="service">
+
+      <div class="service-icon">
+        💧
+      </div>
+
+      <h3>
+        Car Water Wash
+      </h3>
+
+      <p>
+        Quick & thorough exterior cleaning.
+      </p>
+
+    </div>
+
+
+    <!-- SERVICE 5 -->
+
+    <div class="service">
+
+      <div class="service-icon">
+        🛠️
+      </div>
+
+      <h3>
+        Car Accessories
+      </h3>
+
+      <p>
+        Useful & stylish upgrades for your car.
+      </p>
+
+    </div>
+
+
+    <!-- SERVICE 6 -->
+
+    <div class="service">
+
+      <div class="service-icon">
+        🚘
+      </div>
+
+      <h3>
+        Vehicle Consultancy
+      </h3>
+
+      <p>
+        Expert guidance for two & four wheelers.
+      </p>
+
+    </div>
+
+  </div>
 
 </section>
 
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact">
+
+  <div class="contact-card">
+
+    <h2 class="section-title">
+      CONTACT <span>US</span>
+    </h2>
+
+    <p class="section-subtitle">
+      Easy access — tap to connect
+    </p>
+
+
+    <div class="contact-buttons">
+
+
+      <!-- CALL -->
+
+      <a
+        class="contact-button call-button"
+        href="tel:+917868948330"
+      >
+
+        <div class="contact-icon">
+          ☎
+        </div>
+
+        <div>
+
+          <strong>
+            CALL PM CARS
+          </strong>
+
+          <small>
+            +91 78689 48330
+          </small>
+
+        </div>
+
+      </a>
+
+
+      <!-- WHATSAPP -->
+
+      <a
+        class="contact-button whatsapp-button"
+        href="https://wa.me/917868948330?text=Hello%20PM%20Cars%2C%20I%27m%20interested%20in%20your%20services."
+        target="_blank"
+      >
+
+        <div class="contact-icon">
+          💬
+        </div>
+
+        <div>
+
+          <strong>
+            WHATSAPP US
+          </strong>
+
+          <small>
+            Chat with PM Cars
+          </small>
+
+        </div>
+
+      </a>
+
+
+      <!-- LOCATION -->
+
+      <a
+        class="contact-button location-button"
+        href="https://maps.app.goo.gl/b3NwNB9SVPCJLstV8"
+        target="_blank"
+      >
+
+        <div class="contact-icon">
+          📍
+        </div>
+
+        <div>
+
+          <strong>
+            GET DIRECTIONS
+          </strong>
+
+          <small>
+            Open PM Cars location
+          </small>
+
+        </div>
+
+      </a>
+
+
+    </div>
+
+
+    <!-- CONTACT INFORMATION -->
+
+    <div class="contact-info">
+
+      <div class="contact-info-title">
+        📞 CONTACT INFORMATION
+      </div>
+
+      <a
+        class="phone-number"
+        href="tel:+917868948330"
+      >
+        +91 78689 48330
+      </a>
+
+      <a
+        class="phone-number"
+        href="tel:+919655677322"
+      >
+        +91 96556 77322
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
 <footer class="footer">
 
-Thank you for choosing <b>PM CARS</b> ❤️
+  <strong>
+    PM CARS
+  </strong>
 
-<br><br>
+  <br><br>
 
-Drive Your Dream Car
+  Quality • Trust • Satisfaction
 
 </footer>
+
 
 </div>
 
